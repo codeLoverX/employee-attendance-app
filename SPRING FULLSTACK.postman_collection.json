@@ -1,0 +1,309 @@
+{
+	"info": {
+		"_postman_id": "c947a435-7853-421b-abd5-de349c627bf2",
+		"name": "SPRING FULLSTACK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Office Hour",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/officeHour/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"officeHour",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Zucker\",\n    \"designation\": \"CEO\",\n    \"department\": \"Owner\"\n},",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/employee",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch Office Hour Start",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"op\": \"update\",\n    \"key\": \"officeStart\",\n    \"value\": \"10:00 AM\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/officeHour/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"officeHour",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch Office Hour End",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"op\": \"update\",\n    \"key\": \"officeEnd\",\n    \"value\": \"9:00 PM\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/officeHour/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"officeHour",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateAttendanceFromCSV",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/attendance/CSVAttendanceCreate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"attendance",
+						"CSVAttendanceCreate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Attendance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/employee/attendance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"attendance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Attendance From Department",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/employee/attendance/?department=Owner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"attendance",
+						""
+					],
+					"query": [
+						{
+							"key": "department",
+							"value": "Owner"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Attendance From Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/employee/attendance/?name=Ridwan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"attendance",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Ridwan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete attendance",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/employee/attendance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"attendance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Attendance By Department",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Generate PDF",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"id\": 277,\n        \"officeIn\": \"10:00 AM\",\n        \"officeOut\": \"02:00 PM\",\n        \"lateOfficeIn\": true,\n        \"earlyOfficeOut\": true,\n        \"date\": \"2022-05-16\",\n        \"employee\": {\n            \"id\": 226,\n            \"name\": \"Ridwan\",\n            \"designation\": \"Full stack\",\n            \"department\": \"Developer\"\n        }\n    },\n    {\n        \"id\": 276,\n        \"officeIn\": \"08:00 AM\",\n        \"officeOut\": \"06:00 PM\",\n        \"lateOfficeIn\": false,\n        \"earlyOfficeOut\": false,\n        \"date\": \"2022-05-15\",\n        \"employee\": {\n            \"id\": 226,\n            \"name\": \"Ridwan\",\n            \"designation\": \"Full stack\",\n            \"department\": \"Developer\"\n        }\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/employee/generatePdf/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee",
+						"generatePdf",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
