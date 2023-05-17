@@ -7,5 +7,6 @@ If you have any questions, please let me know. \
 Thank you! Regards,\
 Ridwan Bin Monjur
 
-![image](https://github.com/codeLoverX/employee-attendance-app/assets/52366079/a5f6e853-26f5-4daa-b301-b7fde8c33e86)
+![image (2)](https://github.com/codeLoverX/employee-attendance-app/assets/52366079/393581c7-1580-4f65-b14c-5e64e5b9c572)
+
 ![image (1)](https://github.com/codeLoverX/employee-attendance-app/assets/52366079/6ed2ab6a-2868-45ed-8551-263a090e89b5)
