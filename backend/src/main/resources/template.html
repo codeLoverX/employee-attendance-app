@@ -1,0 +1,38 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    @page {
+    size: A4;
+    }
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    </link>
+</head>
+<body>
+<h3>
+    <span>Attendance pdf</span>
+</h3>
+<div>
+    <table  class="table table-striped" style="width: 180mm !important;">
+        <thead class="thead-dark" style="width: 180mm !important;">
+        <tr>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Designation</th>
+            <th>Office In</th>
+            <th>Office Out</th>
+            <th>Date</th>
+        </tr>
+        </thead>
+        <tbody style="width: 180mm !important;">
+        <tr th:each="attendance : ${attendanceList}">
+            <td th:text="${attendance.employee.name}"></td>
+            <td th:text="${attendance.employee.designation}"></td>
+            <td th:text="${attendance.employee.department}"></td>
+            <td th:class="${attendance.lateOfficeIn} ? text-danger" th:text="${attendance.officeIn}"></td>
+            <td th:class="${attendance.earlyOfficeOut} ? text-warning" th:text="${attendance.officeOut}"></td>
+            <td th:text="${attendance.date}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
